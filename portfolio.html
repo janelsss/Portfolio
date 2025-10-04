@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body class="font-sans bg-white text-gray-900">
+    <div class="fixed top-4 right-4 z-50">
+        <!--NAV-->
+        <button id="menu-btn" class="flex flex-col justify-center items-start w-10 h-10 space-y-1.5 p-1">
+    <span class="block h-1 bg-gray-100 rounded-full w-10 transition-all"></span>
+    <span class="block h-1 bg-gray-100 rounded-full w-7 transition-all ml-3"></span>
+    <span class="block h-1 bg-gray-100 rounded-full w-5 transition-all ml-5"></span>
+  </button>
+
+        <nav id="mobile-menu" class="hidden absolute top-full right-0 mt-2 flex flex-col space-y-2 text-right">
+            <a href="#home" class="text-white hover:amber-400 transition transform hover:translate-x-1 text-lg font-semibold">HOME</a>
+            <a href="#skills" class="text-white hover:amber-400 transition transform hover:translate-x-1 text-lg font-semibold">SKILLS</a>
+            <a href="#projects" class="text-white hover:amber-400 transition transform hover:translate-x-1 text-lg font-semibold">PROJECTS</a>
+            <a href="#about" class="text-white hover:amber-400 transition transform hover:translate-x-1 text-lg font-semibold">ABOUT</a>
+            <a href="#contact" class="text-white hover:amber-400 transition transform hover:translate-x-1 text-lg font-semibold">CONTACT</a>
+
+        </nav>
+    </div>
+
+    <!--Home-->
+    <section id="home" class="h-screen flex flex-col justify-center items-start bg-cover bg-center px-6 md:px-10 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/50"></div>
+        <div class="relative z-10 max-w-2xl ml-10 md:ml-20 transform transition-all duration-1000 ease-out translate-x-0 opacity-0 animate-fade-slide">
+            <h2 class="text-4xl md:text-5xl font-semibold mb-2 tracking-wide drop-shadow-lg">Hello,</h2>
+            <h1 class="text-6xl md:text-7xl font-bold leading-tight mb-6 drop-shadow-xl">My Name is<br>Janylle Borje</h1>
+            <button onclick="document.location='#projects'" class="mt-6 px-8 py-3 border-2 border-white rounded-lg font-semibold text-lg hover:bg-white hover:text-black transition transform hover:scale-105 shadow-lg hover:shadow-2xl">
+      PORTFOLIO
+    </button>
+        </div>
+    </section>
+</body>
+
+<!-- Skills & Expertise -->
+<section id="skills" class="py-20 text-center max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold relative inline-block">
+        SKILLS & EXPERTISE
+        <div class="w-24 h-1 bg-gray-400 rounded mx-auto mt-2"></div>
+    </h2>
+    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+        Highlighting my key strengths in development and design.
+    </p>
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white shadow p-6 rounded">
+            <h3 class="font-semibold text-lg">Web Development</h3>
+            <p class="text-gray-600 mt-2">Building modern, responsive, and user-friendly websites.</p>
+        </div>
+        <div class="bg-white shadow p-6 rounded">
+            <h3 class="font-semibold text-lg">UI/UX Design</h3>
+            <p class="text-gray-600 mt-2">Designing clean, intuitive, and engaging user experiences.</p>
+        </div>
+        <div class="bg-white shadow p-6 rounded">
+            <h3 class="font-semibold text-lg">Frontend Development</h3>
+            <p class="text-gray-600 mt-2">Expertise in HTML, CSS, JavaScript, and frameworks.</p>
+        </div>
+        <div class="bg-white shadow p-6 rounded">
+            <h3 class="font-semibold text-lg">Backend Basics</h3>
+            <p class="text-gray-600 mt-2">Experience with databases and server-side integration.</p>
+        </div>
+    </div>
+</section>
+
+<!--PROJECTS-->
+<section id="projects" class="py-16 bg-white">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-start">
+        <div class="md:w-2/5 pr-8">
+            <h2 class="text-3xl font-bold mb-4">PROJECTS</h2>
+            <p class="text-gray-600 leading-relaxed">
+                This section features a variety of projects that reflect creativity, problem-solving, and passion for building useful ideas. From websites and apps to interactive designs, each project tells a story of exploring new possibilities and experimenting with
+                different technologies. Together, they give a glimpse of the journey in turning simple concepts into something engaging and meaningful.
+
+            </p>
+        </div>
+
+        <div class="md:w-3/5 relative pl-16">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bg-white shadow rounded overflow-hidden text-left h-[380px] w-[280px] flex flex-col">
+                        <img src="images/web.png" alt="Pixel Perfectus" class="w-full h-48 object-contain bg-white">
+                        <div class="p-4 flex-grow">
+                            <h3 class="font-semibold text-lg">Pixel Perfectus</h3>
+                            <h6 class="font-sans">HTML | CSS</h6>
+                            <p class="text-gray-600 mt-2">A photography website capturing life through the lens with style and precision.</p>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="swiper-slide bg-white shadow rounded overflow-hidden text-left h-[380px] w-[280px] flex flex-col">
+                        <img src="images/accessability.png" alt="AccessAbility" class="w-full h-48 object-contain bg-white">
+                        <div class="p-4 flex-grow">
+                            <h3 class="font-semibold text-lg">AccessAbility</h3>
+                            <h6 class="font-sans">Dart | Firebase | Google API</h6>
+                            <p class="text-gray-600 mt-2">A GPS app enhancing safe and accessible mobility for PWDs with ease.</p>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="swiper-slide bg-white shadow rounded overflow-hidden text-left h-[380px] w-[280px] flex flex-col">
+                        <img src="images/cryptotel.png" alt="Cryptotel" class="w-full h-48 object-contain bg-white">
+                        <div class="p-4 flex-grow">
+                            <h3 class="font-semibold text-lg">Cryptotel</h3>
+                            <h6 class="font-sans">DART | MongoDB | VERCEL</h6>
+                            <p class="text-gray-600 mt-2">A hotel booking app with crypto payments for fast, secure reservations.</p>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="swiper-slide bg-white shadow rounded overflow-hidden text-left h-[380px] w-[280px] flex flex-col">
+                        <img src="images/phinma diner.png" alt="Phinma Diner" class="w-full h-48 object-contain bg-white">
+                        <div class="p-4 flex-grow">
+                            <h3 class="font-semibold text-lg">Phinma Diner</h3>
+                            <h6 class="font-sans">JAVA | MYSQL</h6>
+                            <p class="text-gray-600 mt-2">A dining reservation app designed for PHINMA students and faculty convenience.</p>
+                        </div>
+                    </div>
+                    <!-- Project 5 -->
+                    <div class="swiper-slide bg-white shadow rounded overflow-hidden text-left h-[380px] w-[280px] flex flex-col">
+                        <img src="images/game.png" alt="After Earth" class="w-full h-48 object-contain bg-white">
+                        <div class="p-4 flex-grow">
+                            <h3 class="font-semibold text-lg">After Earth: Nuclear Fallout</h3>
+                            <h6 class="font-sans">C# | UNITY</h6>
+                            <p class="text-gray-600 mt-2">A narrative-driven action-adventure game about environmental collapse.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="absolute bottom-0 right-0 flex space-x-2 pr-2 pb-2">
+                <div class="swiper-button-prev !static !m-0"></div>
+                <div class="swiper-button-next !static !m-0"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Swiper-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="style.css">
+
+<!-- About -->
+<section id="about" class="py-20 text-center max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold">ABOUT ME</h2>
+    <img src="images/bg/7.jpeg" alt="Profile Picture" class="mx-auto rounded-lg mt-6 w-48 h-48 object-cover">
+    <h3 class="text-xl font-semibold mt-4">Front End Developer</h3>
+    <p class="mt-4 text-gray-600">
+        Hi! I’m Janylle, a passionate front-end developer who transforms creative ideas into interactive web experiences.
+    </p>
+    <a href="resume/Borje, Janylle.pdf" download class="mt-6 inline-block">
+        <button class="px-6 py-2 border-2 border-black hover:bg-black hover:text-white transition">
+    DOWNLOAD RESUME
+  </button>
+    </a>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-gray-300 py-3">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-0 px-4 text-sm">
+        <div class="text-center sm:text-left">
+            © 2025 Janylle A. Borje
+        </div>
+        <div class="flex flex-wrap justify-center sm:justify-center gap-3">
+            <a href="#home" class="hover:text-white transition">Home</a>
+            <a href="#skills" class="hover:text-white transition">Skills</a>
+            <a href="#projects" class="hover:text-white transition">Projects</a>
+            <a href="#about" class="hover:text-white transition">About</a>
+            <a href="#contact" class="hover:text-white transition">Contact</a>
+        </div>
+        <div class="flex space-x-3 text-base">
+            <a href="https://www.facebook.com/borjejanylle" target="_blank" class="hover:text-[#1877F2] transition">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/borjejanylle/" target="_blank" class="hover:text-[#E4405F] transition">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/janelsss" target="_blank" class="hover:text-white transition">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/janylle-borje-3854761a2/" target="_blank" class="hover:text-[#0A66C2] transition">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="img.js"></script>
+
+</body>
+
+</html>
