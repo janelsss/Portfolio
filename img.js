@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
             //'images/bg/6.jpeg'//
         ];
 
-        //RANDOM IMAGE
         const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
         section.style.backgroundImage = `url('${randomBg}')`;
         section.style.backgroundSize = "cover";
@@ -19,38 +18,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
         breakpoints: {
-            0: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }
-        }
+            640: { slidesPerView: 1, spaceBetween: 20 },
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 30 },
+            1280: { slidesPerView: 4, spaceBetween: 30 },
+        },
     });
-});
-const menuBtn = document.getElementById('menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
+    
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-});
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
 
-// Close menu when a link is clicked
-const menuLinks = mobileMenu.querySelectorAll('a');
-menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({ behavior: 'smooth' });
-
-                document.getElementById('mobile-menu').classList.add('hidden');
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                });
             });
         });
     });
