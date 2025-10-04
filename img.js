@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'images/bg/3.jpeg',
             'images/bg/4.jpeg',
             'images/bg/5.jpeg'
-            //'images/bg/6.jpeg'//
         ];
 
         const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
