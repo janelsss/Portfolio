@@ -1,18 +1,37 @@
-@keyframes fadeSlide {
-    0% {
-        opacity: 0;
-        transform: translateX(-40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+
+@keyframes fadeSlideLeft {
+  0% { opacity: 0; transform: translateX(-60px); }
+  100% { opacity: 1; transform: translateX(0); }
 }
 
-.animate-fade-slide {
-    animation: fadeSlide 1s forwards;
-    animation-delay: 0.3s;
+@keyframes fadeSlideRight {
+  0% { opacity: 0; transform: translateX(60px); }
+  100% { opacity: 1; transform: translateX(0); }
 }
+#home .animate-fade-slide-left,
+#home .animate-fade-slide-right {
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+
+.animate-fade-slide-left {
+  animation: fadeSlideLeft 1s ease-out forwards;
+}
+
+.animate-fade-slide-right {
+  animation: fadeSlideRight 1s ease-out forwards;
+}
+
+#home h2 { animation-delay: 0.2s; }
+#home h1 { animation-delay: 0.4s; }
+#home button { animation-delay: 0.6s; }
+
+img[alt="Logo"] { animation-delay: 0.1s; }
+#menu-btn { animation-delay: 0.1s; }
+
+
 
 #mobile-menu a {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
