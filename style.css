@@ -18,37 +18,10 @@
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 /*Hover effect for Skills & Expertise*/
-#skills .bg-white {
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
-    position: relative;
-    overflow: hidden;
+.skill-card:hover i {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
 }
-
-#skills .bg-white:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    background-color: #f9fafb;
-}
-
-#skills .bg-white:hover h3 {
-    color: #696969;
-}
-
-#skills .bg-white:hover p {
-    color: #374151;
-}
-
-#skills .bg-white:hover::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 12px;
-    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), transparent);
-    pointer-events: none;
-}
-
 /*Swiper Buttons*/
 .swiper-button-next,
 .swiper-button-prev {
